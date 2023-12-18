@@ -3,7 +3,14 @@
     <title>AAAAAAAAAAAAAAAAAAAAAAA</title>
     <script>
         var audio = new Audio('chericheri.mp3');
-        audio.play();
+        var playing = false;
+
+        window.onload = function() {
+            document.querySelector('img').addEventListener('click', function() {
+                if(playing) return;
+                audio.play();
+            });
+        }
     </script>
 </head>
 <body>
